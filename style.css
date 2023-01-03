@@ -1,0 +1,326 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(rgb(1, 214, 1), green, black);
+}
+
+.flex-box{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container{
+  width: 450px;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgb(179, 178, 178,0.5);
+  margin: 20px 20px;
+  background: linear-gradient(rgb(1, 214, 1), green, black);
+  
+}
+
+.container_2{
+  width: 450px;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgb(179, 178, 178,0.5);
+  margin: 20px 20px;
+  background: linear-gradient(rgb(1, 214, 1), rgb(0, 128, 0), rgb(0, 0, 0));
+ 
+}
+
+.container h2{
+  font-weight: 600;
+  font-size: 1.31rem;
+  padding: 1rem 1.75rem;
+  border-bottom: 1px solid #d4dbe5;
+  text-align: center;
+  color: white;
+}
+
+.container_2 h2{
+  font-weight: 600;
+  font-size: 1.31rem;
+  padding: 1rem 1.75rem;
+  border-bottom: 1px solid #d4dbe5;
+  text-align: center;
+  color: white;
+}
+
+.wrapper{
+  margin: 1.25rem 1.75rem;
+}
+.wrapper .input-box{
+  position: relative;
+}
+.input-box input{
+  width: 100%;
+  height: 0;
+  color: #000;
+  background: none;
+  font-size: 1.06rem;
+  font-weight: 500;
+  border-radius: 4px;
+  letter-spacing: 1.4px;
+  border: 1px solid #aaa;
+  padding: 0 ;
+}
+
+#div2 span{
+  right: 13px;
+  cursor: pointer;
+  line-height: 30px;
+  color: #707070;
+}
+#div2 span:hover{
+  color: #4285F4!important;
+}
+
+.wrapper .pass-indicator{
+  width: 100%;
+  height: 6px;
+  position: relative;
+  background: #ffffff;
+  margin-top: 0.75rem;
+  border-radius: 25px;
+}
+.pass-indicator::before{
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 50%;
+  border-radius: inherit;
+  transition: width 0.3s ease;
+}
+.pass-indicator#weak::before{
+  width: 20%;
+  background: #E64A4A;
+}
+.pass-indicator#medium::before{
+  width: 50%;
+  background: #f1c80b;
+}
+.pass-indicator#strong::before{
+  width: 100%;
+  background: #72f436;
+}
+
+label{
+  color: #ffffff;
+}
+span{
+  color: #ffffff;
+}
+
+.wrapper .pass-length{
+  margin: 1.56rem 0 1.25rem;
+}
+.pass-length .details{
+  display: flex;
+  justify-content: space-between;
+}
+.pass-length input{
+  width: 100%;
+  height: 5px;
+}
+.no_of_Passwords{
+  margin-bottom: 0.63rem;
+}
+
+.no_of_Passwords input{
+  padding-left: 0.5rem;
+}
+
+.pass-settings .options{
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+.pass-settings .options .option{
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  width: calc(100% / 2);
+}
+
+.pass-settings .options #userinput{
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  width: calc(100%/2 );
+}
+
+.pass-settings .options  #user_input{
+  cursor: pointer;
+  color: #000000;
+  padding-left: 0.4rem;
+  height: 18px;
+  width: calc(80%);
+}
+.pass-settings .options  #user_input2{
+  cursor: pointer;
+  color: #000000;
+  padding-left: 0.4rem;
+  height: 18px;
+  width: calc(80% );
+}
+
+.pass-settings .options  #userinputdiv{
+  padding-left: 0.63rem;
+}
+
+/*
+.options .option:first-child{
+  pointer-events: none;
+}
+.options .option:first-child input{
+  opacity: 0.7;
+}*/
+.options .option input{
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
+}
+
+.options .option label{
+  cursor: pointer;
+  color: #ffffff;
+  padding-left: 0.63rem;
+}
+
+/*
+.options .option #user_input{
+  cursor: pointer;
+  color: #000000;
+  padding-left: 0.63rem; 
+}*/
+
+.options #userinput #label_1{
+  padding-right: 1.1rem;
+}
+
+.wrapper .generate-btn{
+  width: 100%;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: green;
+  font-size: 1.06rem;
+  padding: 0.94rem 0;
+  border-radius: 5px;
+  text-transform: uppercase;
+  margin: 0.94rem 0 1.3rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+table{
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem auto;
+}
+
+table, th, tr , td{
+  padding: 0.2rem;
+  text-align: center;
+  
+}
+
+#div2{
+  background-color: #ffffff;
+  border: 2px solid #707070;
+  border-radius: 5px;
+  height: 20rem;
+  overflow: auto;
+  padding: 0;
+  
+}
+#display{
+  border-radius: 5px;
+  height: 100px;
+  width: 100%;
+  margin: 0; 
+}
+
+#display td{
+  height: 35px;
+  padding: 0;
+  padding-left: 3rem;
+  text-align: left;
+  color: rgb(0, 0, 0);
+}
+
+::-webkit-scrollbar{
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-thumb{
+  border-radius: 10px;
+  background: rgb(31, 30, 30);
+}
+.file-options-body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.file-options-body :where(.option1, .select-menu, .save-as){
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  color: #4f4f4f;
+}
+
+.file-options-body .file-options{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.option1 :where(.option1, #filename, .select-menu, #select-file){
+  height: 20px;
+  border: 1px solid #707070;
+  border-radius: 2px;
+  padding: 0 5px;
+  margin-right: 5px;
+}
+
+#select-file{
+  width: 100%;
+  border: 1px solid #707070;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.wrapper .save-btn{
+  width: 100%;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: green;
+  font-size: 1.06rem;
+  padding: 0.94rem 0;
+  border-radius: 5px;
+  text-transform: uppercase;
+  margin: 0.94rem 0 1.3rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
