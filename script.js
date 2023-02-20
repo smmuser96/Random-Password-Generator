@@ -53,7 +53,7 @@ const generatePassword = () => {
             }
         }
     });
-
+    
     if(NoOfPasswords.value > 99999){
         alert("Limit exceeded. \nValid range 1 - 99999.")
     }
@@ -90,7 +90,7 @@ const generatePassword = () => {
                 }
             });
 
-            passwords.push(randomPassword);
+            passwords.push(randomPassword + "\n");
 
             passwordInput.value = randomPassword; // passing randomPassword to passwordInput value
          
@@ -119,6 +119,9 @@ var entry = document.getElementById("entry");
 entry.addEventListener("click",clearDisplay);
 
 function clearDisplay(){
+    if(NoOfPasswords.value == ""){
+        alert("Enter Number of Passwords !!!");
+    }
     for(let i = 0 ; i < 100000 ; i++){
         var table = document.querySelector("tr");
         table.remove();  
@@ -143,7 +146,7 @@ const updateSlider = () => {
 updateSlider();
 
 const copyPassword = () => {
-    navigator.clipboard.writeText(passwords); // copying random password
+    navigator.clipboard.writeText(passwords.join("")); // copying random password
     copyIcon.innerText = "check"; // changing copy icon to tick
     copyIcon.style.color = "#4285F4";
     setTimeout(() => { // after 1500 ms, changing tick icon back to copy
@@ -164,10 +167,21 @@ selectMenu.addEventListener("change", () => {
 
 // download txt, json, xml files
 saveBtn.addEventListener("click", () => {
-    const blob = new Blob([passwords], {type: selectMenu.value});
+    var pw;
+    
+    for(let i = 0; i < passwords.length ; i++){
+        pw = passwords[i];  
+    }
+    const blob = new Blob([passwords.join("")], {type: selectMenu.value});
     const fileUrl = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    link.download = fileNameInput.value;
-    link.href = fileUrl;
+       const link = document.createElement("a");
+       link.download = fileNameInput.value;
+       link.href = fileUrl;
+    
     link.click();
+    
 });
+
+function showPw(){
+   
+}
