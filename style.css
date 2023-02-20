@@ -11,7 +11,7 @@ body{
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: #130119;
+  background: black;
 }
 
 .flex-box{
@@ -37,7 +37,7 @@ body{
   border-radius: 8px;
   box-shadow: 0 10px 20px rgb(179, 178, 178,0.5);
   margin: 20px 20px;
-  background: linear-gradient(rgb(1, 214, 1), rgb(0, 128, 0), rgb(0, 0, 0));
+  background: black;
  
 }
 
@@ -218,7 +218,7 @@ span{
   border: none;
   outline: none;
   cursor: pointer;
-  background: green;
+  background: gray;
   font-size: 1.06rem;
   padding: 0.94rem 0;
   border-radius: 5px;
@@ -315,7 +315,7 @@ table, th, tr , td{
   border: none;
   outline: none;
   cursor: pointer;
-  background: green;
+  background: gray;
   font-size: 1.06rem;
   padding: 0.94rem 0;
   border-radius: 5px;
